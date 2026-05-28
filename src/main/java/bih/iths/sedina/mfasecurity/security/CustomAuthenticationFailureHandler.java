@@ -11,8 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-public class CustomAuthenticationFailureHandler
-        implements AuthenticationFailureHandler {
+public class CustomAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
     private final LoginAttemptService loginAttemptService;
 
@@ -21,10 +20,8 @@ public class CustomAuthenticationFailureHandler
     }
 
     @Override
-    public void onAuthenticationFailure(
-            HttpServletRequest request,
-            HttpServletResponse response,
-            AuthenticationException exception)
+    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+                                        AuthenticationException exception)
             throws IOException, ServletException {
 
         String username = request.getParameter("username");
