@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>verify</title>
 </head>
 <body>
-$END$
+
+<form action="/verify-2fa" method="post">
+    <input name="code" placeholder="Enter code">
+    <button type="submit">Verify</button>
+</form>
+
+<p style="color:red;" th:if="${error}" th:text="${error}"></p>
+
 </body>
 </html>
